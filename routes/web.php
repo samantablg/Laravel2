@@ -29,10 +29,18 @@ Route::get('/users', 'userController@show');
 
 Route::get('/user/{id}', 'userController@showUser');
 
-Route::get('/{id}', 'userController@showInvoice');
+Route::get('/tutu/{id}', 'userController@showInvoice');
 
 Route::get('/nameUser/{id}', 'userController@showName');
 
 Route::get('/profile/{id}', 'userController@getProfile');
 
 Route::get('/profile/search/{id}', 'userController@getInvoice');
+
+Route::get('/fallo', function () {
+    return 'Fallo';
+});
+
+Route::get('/peticion', function () {
+    return 'peticion Aceptada';
+})->middleware('Login');

@@ -32,4 +32,8 @@ class User extends Authenticatable
     public function getInvoice() {
         return $this -> hasMany('App\Invoice');
     }
+
+    //public function getMany() {
+      //  return $this -> belongsToMany('App\Invoice');
+    //}
 }
