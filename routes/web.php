@@ -25,10 +25,10 @@ Route::get('/user/all', function () {
     }
 });
 
-Route::get('/usuarios', 'userController@mostrar');
+Route::get('/users', 'userController@mostrar');
 
-Route::get('/usuarios/{id}', 'userController@mostrarUsuario');
+Route::get('/user/{id}', 'userController@mostrarUsuario');
 
 Route::get('/{id}', 'userController@mostrarInvoice');
 
-Route::get('/nombre/{id}', 'userController@mostrarName');
+Route::get('/nameUser/{id}', 'userController@mostrarName');
