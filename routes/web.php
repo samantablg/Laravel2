@@ -30,3 +30,5 @@ Route::get('/usuarios', 'userController@mostrar');
 Route::get('/usuarios/{id}', 'userController@mostrarUsuario');
 
 Route::get('/{id}', 'userController@mostrarInvoice');
+
+Route::get('/nombre/{id}', 'userController@mostrarName');

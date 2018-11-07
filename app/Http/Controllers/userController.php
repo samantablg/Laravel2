@@ -21,4 +21,9 @@ class userController extends Controller
         $aUser = Invoice::find($id);
         dd($aUser);
     }
+
+    public function mostrarName ($id) {
+        $nUser = User::where('user_id', $id);
+        dd($nUser);
+    }
 }
