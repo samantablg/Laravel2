@@ -14,4 +14,11 @@ class Invoice extends Model
 	 */
 	protected $table = 'invoices';
 
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
+
+    public function getUser() {
+        return $this -> belongsTo('App\User');
+    }
 }

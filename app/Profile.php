@@ -14,4 +14,11 @@ class Profile extends Model
 	 */
 	protected $table = 'profiles';
 
+    protected $hidden = [
+        'password', 'remember_token',
+    ];
+
+    public function getUser() {
+        return $this -> belongsTo('App\User');
+    }
 }

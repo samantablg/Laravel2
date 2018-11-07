@@ -24,4 +24,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function getProfile() {
+        return $this -> hasOne('App\Profile');
+    }
+
+    public function getInvoice() {
+        return $this -> hasMany('App\Invoice');
+    }
 }

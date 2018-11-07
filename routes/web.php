@@ -25,10 +25,14 @@ Route::get('/user/all', function () {
     }
 });
 
-Route::get('/users', 'userController@mostrar');
+Route::get('/users', 'userController@show');
 
-Route::get('/user/{id}', 'userController@mostrarUsuario');
+Route::get('/user/{id}', 'userController@showUser');
 
-Route::get('/{id}', 'userController@mostrarInvoice');
+Route::get('/{id}', 'userController@showInvoice');
 
-Route::get('/nameUser/{id}', 'userController@mostrarName');
+Route::get('/nameUser/{id}', 'userController@showName');
+
+Route::get('/profile/{id}', 'userController@getProfile');
+
+Route::get('/profile/search/{id}', 'userController@getInvoice');
